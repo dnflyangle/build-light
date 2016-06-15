@@ -1,0 +1,2 @@
+plugin TestCiServer
+plugin CCTrayServer
