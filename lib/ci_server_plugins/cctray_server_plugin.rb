@@ -26,8 +26,9 @@ module Blinky
       begin
         run_every 15
       rescue => e
-        warning!
-        raise e
+        puts e
+        puts ENV["URL"]
+        retry  
       end
     end
   end
