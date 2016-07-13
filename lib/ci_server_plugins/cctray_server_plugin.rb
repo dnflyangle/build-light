@@ -12,14 +12,23 @@ module Blinky
       when_run do |state|
         build_state = state[:servers]["blinky build"].delete_if { |key, value|
           !(build_names.include? key)
-        }.map { |key, value|
-          value[:last_build_status].to_s.eql? "success"
-        }.reduce(:&)
+        }
+        is_buidling = build_state.map { |key, value|
+          value[:activity].to_s.eql? "building"
+        }.reduce(:|)
 
-        if build_state
-          success!
+        if is_buidling
+          building!
         else
-          failure!
+          is_success = build_state.map { |key, value|
+            value[:last_build_status].to_s.eql? "success"
+          }.reduce(:&)
+
+          if is_success
+            success!
+          else
+            failure!
+          end
         end
       end
 

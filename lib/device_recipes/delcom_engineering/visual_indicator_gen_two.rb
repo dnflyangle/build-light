@@ -4,18 +4,18 @@ module Blinky
       module GenerationII
 
         def success!
-          off! 
-          set_colour("\x01") 
+          off!
+          set_colour("\x01")
         end
 
-        def failure!  
+        def failure!
           off!
-          set_colour("\x02") 
+          set_colour("\x02")
         end
 
         def building!
-          off!  
-          set_colour("\x04")
+          off!
+          set_colour("\x03")
         end
 
         def warning!
@@ -24,7 +24,7 @@ module Blinky
         end
 
         def off!
-          set_colour("\x00")  
+          set_colour("\x00")
         end
 
         def init

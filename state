@@ -1,0 +1,17 @@
+---
+:servers:
+  blinky build:
+    'AtlasOperateDevServer :: BuildAndPublish':
+      :activity: :sleeping
+      :last_build_status: :success
+      :last_build_time: 1468489421
+      :url: https://go.nbnco.net.au/go/pipelines/AtlasOperateDevServer/2439/BuildAndPublish/1
+      :last_label: '2439'
+    'AtlasOperateDevServer :: IntegrationTests :: tests':
+      :activity: :building
+      :last_build_status: :success
+      :last_build_time: 1468445545
+      :url: https://go.nbnco.net.au/go/tab/build/detail/AtlasOperateDevServer/2439/IntegrationTests/1/tests
+      :last_label: '2438'
+:repos: {}
+:sites: {}
