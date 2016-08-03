@@ -3,14 +3,12 @@ module Blinky
     module SirenOfShame
 
       def success!
-        # Ding! sound and fade lights for 10 seconds
-        set_audio_pattern(2, 10)
-        set_flash_pattern(3, 10)
+        stop
       end
 
       def failure!
-        # Sad trombone sound for 10 seconds and Chase lights
-        set_audio_pattern(1, 10)
+        # Sad trombone sound for 5 seconds and Chase lights
+        set_audio_pattern(1, 5)
         set_flash_pattern(4, 999)
       end
 
