@@ -20,6 +20,28 @@ Heres blinky running three different lights at once:
 
 {<img src="https://raw.github.com/perryn/blinky/master/lights.jpg" height="50%" width="50%">}[https://raw.github.com/perryn/blinky/master/lights.jpg]
 
+== What lights do blinky support?
+
+* Declcom Engineering Visual Indicator
+* Thing M Blink 1
+* Dream Cheeky Webmail Notifier 
+* Automated Architecture Siren of Shame
+
+== How do I setup blinky?
+
+  brew install libusb
+
+  gem install blinky
+
+  bundle install
+
+
+You will need to update the .env file to add in your username and password to the cctray go pipeline feed. Below are examples of URL and BUILDS when using with go cd.
+
+URL="https://go.nbnco.net.au/go/cctray.xml"
+
+BUILDS="AtlasOperateDevServer \:\: BuildAndPublish, AtlasOperateDevServer \:\: IntegrationTests \:\: tests"
+
 == How do I use blinky?
 
 Plug in your USB light, and then do something like this
